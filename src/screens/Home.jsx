@@ -10,7 +10,7 @@ export default function Home() {
         <Navbar/>
     </div>
     <div>
-      <ProductList/>
+     <ProductList/>
     </div>
     <div>
       <Footer/>
