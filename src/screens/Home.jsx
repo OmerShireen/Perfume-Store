@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import ProductCard from '../components/ProductCard'
+import ProductList from '../components/Productlist'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
         <Navbar/>
     </div>
     <div>
-      <ProductCard/>
+      <ProductList/>
     </div>
     <div>
       <Footer/>
