@@ -8,6 +8,7 @@ import Cart from "./screens/Cart.jsx";
 import Signup from "./screens/Signup.jsx";
 import UserPage from "./components/UserPage.jsx";
 import ProtectedRoutes from "./routes/ProtectedRoutes.jsx"
+import ProductDetails from "./components/ProductDetails.jsx";
 function App() {
 
 
@@ -20,7 +21,7 @@ function App() {
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/user" element={<ProtectedRoutes><UserPage/></ProtectedRoutes>}/>
-
+          <Route path="/product-details/:id" element={<ProductDetails />} />
 
         </Routes>
       </Router>
