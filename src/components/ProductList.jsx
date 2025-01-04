@@ -23,7 +23,7 @@ export default function ProductList() {
         <div key={product.id} className={styles.product}>
           <img src={product.image_url} alt={product.title} className={styles.productImage} />
           <h3>{product.title}</h3>
-          <p>{product.description}</p>
+          <p><strong>Price:</strong> Rs.{product.price}</p> {/* Display the price */}
         </div>
       ))}
     </div>
