@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar.jsx';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';

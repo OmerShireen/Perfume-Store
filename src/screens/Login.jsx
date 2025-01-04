@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar.jsx';
 import styles from './Login.module.css'; // Import the CSS module
 import { Link, useNavigate } from 'react-router-dom'; // For navigation after login
 import axios from 'axios'; // For HTTP requests

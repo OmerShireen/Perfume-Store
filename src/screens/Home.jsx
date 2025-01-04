@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import ProductList from '../components/Productlist'
-import Footer from '../components/Footer'
+import Navbar from '../components/Navbar.jsx'
+import ProductList from '../components/Productlist.jsx'
+import Footer from '../components/Footer.jsx'
 
 export default function Home() {
   return (
