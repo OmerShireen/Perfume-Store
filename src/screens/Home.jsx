@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar.jsx'
-import ProductList from '../components/Productlist.jsx'
+import ProductList from './../components/ProductList.jsx'
 import Footer from '../components/Footer.jsx'
 
 export default function Home() {
