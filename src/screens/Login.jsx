@@ -17,7 +17,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/login', formData);
+      const response = await axios.post('https://perfume-store-backend.vercel.app/login', formData);
       setMessage(response.data.message);
       console.log('User logged in:', response.data);
 
