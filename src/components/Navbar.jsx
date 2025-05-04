@@ -28,7 +28,7 @@ export default function Navbar() {
             style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
             to="/">
             <img
-              src="public/img/logo.png"
+              src="/images/logo.png"
               alt="Logo"
               style={{ height: '120px', width: '250px' }}
             />
