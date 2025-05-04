@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import styles from './Product.module.css'; // Optional CSS for styling
+import styles from './ProductList.module.css'; // Optional CSS for styling
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
