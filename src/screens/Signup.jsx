@@ -28,7 +28,7 @@ export default function Signup() {
     }
   
     try {
-      const response = await axios.post('http://localhost:3000/register', formData);
+      const response = await axios.post('https://perfume-store-backend.vercel.app/register', formData);
       setMessage(response.data.message);
       console.log('User registered:', response.data);
     } catch (error) {
