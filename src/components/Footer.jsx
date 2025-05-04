@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Footer() {
+    let date = new Date();
   return (
     <div>
       <footer
@@ -8,7 +9,7 @@ export default function Footer() {
         style={{ backgroundColor: '#000000'}}
       >
         <div className="col-md-4 d-flex justify-content-center">
-          <span className="" style={{color:'#ffffff'}}>© 2024 Musk Al Mahal</span>
+          <span className="" style={{color:'#ffffff'}}>© {date.getFullYear()} Musk Al Mahal</span>
         </div>
       </footer>
     </div>
