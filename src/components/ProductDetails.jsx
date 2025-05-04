@@ -17,7 +17,7 @@ export default function ProductDetails() {
       const fetchProduct = async () => {
         try {
           setLoading(true); // Start loading
-          const response = await axios.get(`http://localhost:3000/products/${id}`); // Fetch product by ID
+          const response = await axios.get(`https://perfume-store-backend.vercel.app/products/${id}`); // Fetch product by ID
           setProduct(response.data);
         } catch (err) {
           setError(err.message || 'Error fetching product details');

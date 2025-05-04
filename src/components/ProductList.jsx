@@ -10,7 +10,7 @@ export default function ProductList() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/products'); // Replace with your backend URL
+        const response = await axios.get('https://perfume-store-backend.vercel.app/products'); // Replace with your backend URL
         setProducts(response.data); // Store the data in state
       } catch (error) {
         console.error('Error fetching products:', error.message);
