@@ -28,7 +28,7 @@ export default function  UserNavbar() {
             style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}
             to="/">
             <img
-              src="src/components/logo.png"
+              src="images/logo.png"
               alt="Logo"
               style={{ height: '120px', width: '250px' }}
             />
