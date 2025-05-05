@@ -3,6 +3,8 @@ import { useParams, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import styles from './ProductDetails.module.css';
 import Navbar from './Navbar.jsx';
+import { addToCart } from "../redux/slices/cartslice.js";
+import { useDispatch } from "react-redux";
 
 export default function ProductDetails() {
   const { id } = useParams(); // Extract product ID from the URL
@@ -10,6 +12,8 @@ export default function ProductDetails() {
   const [product, setProduct] = useState(location.state?.product || null);
   const [loading, setLoading] = useState(!product); // If product is not passed, show loading
   const [error, setError] = useState(null); // Error state for better error handling
+  const dispatch = useDispatch();
+   
 
   useEffect(() => {
     if (!product) {
@@ -42,14 +46,14 @@ export default function ProductDetails() {
   // If product data is successfully fetched or passed, render the product details
   return (
     <>
-    <div><Navbar/></div>
-    <div className={styles.productDetails}>
-      <img src={product.image_url} alt={product.title} className={styles.productImage} />
-      <h2>{product.title}</h2>
-      <p><strong>Price:</strong> Rs.{product.price}</p>
-      <p>{product.description || 'No description available.'}</p>
-      <button className={styles.addToCartButton}>Add to Cart</button>
-    </div>
+      <div><Navbar /></div>
+      <div className={styles.productDetails}>
+        <img src={product.image_url} alt={product.title} className={styles.productImage} />
+        <h2>{product.title}</h2>
+        <p><strong>Price:</strong> Rs.{product.price}</p>
+        <p>{product.description || 'No description available.'}</p>
+        <button className={styles.addToCartButton} onClick={() => dispatch(addToCart(product))}>Add to Cart</button>
+      </div>
     </>
   );
 }
