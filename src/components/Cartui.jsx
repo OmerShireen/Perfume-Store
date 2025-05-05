@@ -1,7 +1,7 @@
 // src/components/Cart.jsx
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 const Cartui = ({price,quantity , name ,pic_url,removeItem,addItem,remove_one_Item}) => {
   const cItems = useSelector((state) => state.cart.items)
   const subTotal = cItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -46,14 +46,12 @@ const Cartui = ({price,quantity , name ,pic_url,removeItem,addItem,remove_one_It
           <span>Subtotal</span>
           <span> Rs : {subTotal}</span>
         </div>
-
-        <button className="w-full bg-black text-white py-2 rounded-full font-medium mb-2">
-          Check out
-        </button>
-        <button className="w-full border border-black py-2 rounded-full font-medium">
+<Link to="/">
+        <button className="w-full border border-black py-2 rounded-full font-medium "
+        style={{color:"white", backgroundColor:"#000000", borderRadius:"5px"}}>
           Continue shopping
         </button>
-
+        </Link>
         <p className="text-sm text-center text-gray-500 mt-4">
           Shipping, taxes, and discount codes calculated at checkout.
         </p>

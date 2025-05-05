@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar.jsx'
 import Cartui from '../components/Cartui.jsx'
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart,remove_one_Item ,addToCart} from "../redux/slices/cartslice.js";
+import { removeFromCart, remove_one_Item, addToCart } from "../redux/slices/cartslice.js";
+import { Link } from 'react-router-dom';
 
 export default function Cart() {
   const dispatch = useDispatch();
@@ -12,7 +13,13 @@ export default function Cart() {
       <div><Navbar /></div>
       <center>
         {
-          cItems == "" ? "Your cart is currently empty" :
+          cItems == "" ?
+            <><br />
+              <br /><br />            <h1 >Your cart is currently empty</h1>
+              <br /><br /><Link to={"/"}>    <button className="w-full border border-black py-2 rounded-full font-medium "
+                style={{ color: "white", backgroundColor: "#000000", borderRadius: "5px" }}>Continue Shopping
+              </button></Link>
+            </> :
             cItems.map((i, index) => {
               return (<>
                 <Cartui
@@ -23,7 +30,7 @@ export default function Cart() {
                   quantity={i.quantity}
                   remove_one_Item={() => dispatch(remove_one_Item(i))}
                   removeItem={() => dispatch(removeFromCart(i))}
-                  addItem={()=> dispatch(addToCart(i))}
+                  addItem={() => dispatch(addToCart(i))}
                 />
               </>)
             })

@@ -77,7 +77,7 @@ export default function Navbar() {
                         transform: 'translate(-30%, -50%)',
                         zIndex: 1,
                         borderRadius: '50%', // 👈 Thodi kam golai
-                        padding: '3px',   // Optional: adjust padding for rectangle shape
+                        padding: '2px 4px',   // Optional: adjust padding for rectangle shape
                         color: 'white',
                         backgroundColor: '#f6b116',
                       }}
